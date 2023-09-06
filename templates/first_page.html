@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <p>Umca umca</p>
+    <title>My Webpage</title>
 </head>
 <body>
+    <ul id="navigation">
+    {% for item in navigation %}
+        <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h1>My Webpage</h1>
+    {{ a_variable }}
+
+    {# a comment #}
+
+<!-- START SUBMIT -->
+<!-- https://stackoverflow.com/questions/63636261/how-to-display-returned-string-from-flask-in-html -->
+<iframe name="frame" class="hidden"></iframe>
+<form action="/upload" target="frame" method="POST">
+    <input type="text" name="text" />
+    <button type="submit">Submit</button>
+</form>
+{% if processed_text %}
+<p id="text">{{ processed_text }}</p>
+{% endif %}
+<!-- END SUBMIT -->
 
 </body>
 </html>
