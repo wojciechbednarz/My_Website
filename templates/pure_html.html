@@ -1,0 +1,28 @@
+<!-- DATABASE CONTAINING NAMES OF THE FRIENDS -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Database of the friends</title>
+
+
+<script type="text/JavaScript">
+    function showInput() {
+        var message = document.getElementById("uniqueAsiaID").value;
+            display_message.innerHTML= message;
+    }
+</script>
+</head>
+
+<body>
+<form name="nameBox" target="#here" method="post">
+<h1>Type the name of the person, which you want to retrieve information:</h1>
+    <input type="text" name="asia" id="uniqueAsiaID" maxlength="15" size="20"><br/>
+    <input type="submit" onclick="showInput();" value = "Submit">
+</form>
+
+<p>Here is the name of the person: <font size="20"><span id = "display_message" size="20" > </span> </font></p>
+
+<!-- JAK ZROBIC ZEBY MI NIE OTWIERALO NOWEJ STRONY Z METODA POSTY, tylko zeby działał sam enter na submicie? -->
+
+</body>
+</html>

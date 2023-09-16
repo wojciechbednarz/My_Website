@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/first_page/')
 def first_page(name=None):
-    return render_template('first_page.html', name=name)
+    return render_template('pure_html.html', name=name)
 
 
 @app.route("/upload", methods=['POST'])
